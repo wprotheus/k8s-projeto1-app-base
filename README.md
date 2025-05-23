@@ -5,7 +5,7 @@
 
 ---
 
-### Abstraindo um Bootcamp Usando Orientação a Objetos em Java
+### Criando um Deploy de uma Aplicação
 
 Atividade executada, replicando os passos/codificação contidos nos vídeos, sendo assim uma quase cópia da solução apresentada, e conforme orientações abaixo, retiradas da [Descrição do Desafio](https://web.dio.me/lab/criando-um-deploy-de-uma-aplicacao/learning/c3f8fdf5-8cae-451f-b488-1f3428c26086)  
 <small><sup>Obs.: O link acima somente é acessado através de uma conta na plataforma DIO.</sup></small>
