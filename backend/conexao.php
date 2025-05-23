@@ -1,18 +1,23 @@
 <?php
-$servername = "";
-$username = "root";
-$password = "Senha123";
+$host = getenv("DB_HOST") ?: "localhost";
+$user = "root";
+$password = "********";
 $database = "meubanco";
 
-// Criar conexão
+$link = new mysqli($host, $user, $password, $database);
 
-
-$link = new mysqli($servername, $username, $password, $database);
-
-/* check connection */
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
+// Verifica conexão
+if ($link->connect_error) {
+    die("Conexão falhou: " . $link->connect_error);
 }
 
+$query = "INSERT INTO tabela (coluna1, coluna2) VALUES ('valor1', 'valor2')";
+
+if ($link->query($query) === TRUE) {
+    echo "Novo registro criado com sucesso";
+} else {
+    echo "Erro: " . $link->error;
+}
+
+$link->close();
 ?>
